@@ -18,15 +18,9 @@ public class OI {
     Joystick rightStick = new Joystick(0);
     Joystick leftStick = new Joystick(1);
     
-    Button RtopRightButt = new JoystickButton(rightStick, 3);
-    Button RmidRightButt = new JoystickButton(rightStick, 5);
-    Button RbottomButt = new JoystickButton(rightStick, 1);
-    Button RmidLeftButt = new JoystickButton(rightStick, 4);
-    Button RtopLeftButt = new JoystickButton(rightStick, 2);
-    Button RbackButt = new JoystickButton(rightStick, 0);
-    Button RbackBottomButt = new JoystickButton(rightStick, 6);
-    
-    Button L
+    Button RtopRightButt = new JoystickButton(rightStick, 4);
+    Button RtopMidTopButt = new JoystickButton(rightStick, 2);
+    Button R
     // Button button = new JoystickButton(stick, buttonNumber);
     
     // There are a few additional built in buttons you can use. Additionally,
