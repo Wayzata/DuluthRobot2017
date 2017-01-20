@@ -15,29 +15,36 @@ public class RobotMap {
     public static final int ropeMotorLeft = 0;
     public static final int ropeMotorRight = 0;
     
-    public static final int joystick = 0;
-    public static final int gamepad = 1;
+    public static final int rightStick = 0;
+    public static final int leftStick = 1;
+    public static final int gamepad = 2;
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
-public class JoystickButtons {
-	public static final int XAxis = 0;
-	public static final int YAxis = 1;
-	public static final int ZAxis = 2;
-	public static final int ZRotate =3;
+public class RightStickButtons {
+//	public static final int RXAxis = 0;
+	public static final int RYAxis = 1;
+//	public static final int RZAxis = 2;
+//	public static final int RZRotate =3;
 	
-	public static final int topRightButt = 3;
-	public static final int midRightButt = 5;
-	public static final int bottomButt = 1;
-	public static final int midLeftButt = 4;
-	public static final int topLeftButt = 2;
-	public static final int backButt = 0;
-	public static final int backBottomButt = 6;
+	public static final int RtopRightButt = 3;
+	public static final int RmidRightButt = 5;
+	public static final int RbottomButt = 1;
+	public static final int RmidLeftButt = 4;
+	public static final int RtopLeftButt = 2;
+	public static final int RbackButt = 0;
+	public static final int RbackBottomButt = 6;
 	
 	
 }
-
+public class LeftStickButtons {
+//	public static final int LXAxis = 0;
+	public static final int LYAxis = 1;
+//	public static final int LZRotate = 2;
+//	public static final int LSlider = 3;
+}
+// can comment out gamepad if we don't use it
 public class GamepadButtons {
 	public static final int LXAxis = 0;
 	public static final int LYAxis = 1;
@@ -45,6 +52,8 @@ public class GamepadButtons {
 	public static final int RTrigger = 3;
 	public static final int RXAxis = 4;
 	public static final int RYAxis = 5;
+	
+	
 	
 	
 	
