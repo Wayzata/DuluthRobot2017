@@ -8,11 +8,11 @@ import org.usfirst.frc.team2264.robot.Robot;
 /**
  *
  */
-public class ExampleCommand extends Command {
+public class JoysticksDrive extends Command {
 
     public ExampleCommand() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.exampleSubsystem);
+        requires(Robot.DriveTrain);
     }
 
     // Called just before this Command runs the first time
