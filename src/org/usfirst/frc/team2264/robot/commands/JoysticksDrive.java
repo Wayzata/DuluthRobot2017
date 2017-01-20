@@ -10,7 +10,7 @@ import org.usfirst.frc.team2264.robot.Robot;
  */
 public class JoysticksDrive extends Command {
 
-    public ExampleCommand() {
+    public JoysticksDrive() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.DriveTrain);
     }
@@ -21,6 +21,7 @@ public class JoysticksDrive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.DriveTrain
     }
 
     // Make this return true when this Command no longer needs to run execute()

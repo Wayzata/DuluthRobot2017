@@ -2,11 +2,14 @@
 package org.usfirst.frc.team2264.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.SampleRobot;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team2264.robot.commands.ExampleCommand;
-import org.usfirst.frc.team2264.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -19,8 +22,32 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	    RobotDrive myRobot;  // class that handles basic drive operations
+	    Joystick leftStick;  // set to ID 1 in DriverStation
+	    Joystick rightStick; // set to ID 2 in DriverStation
+	    public Robot() {
+	        myRobot = new RobotDrive(0, 1);
+	        myRobot.setExpiration(0.1);
+	        leftStick = new Joystick(0);
+	        rightStick = new Joystick(1);
+	    }
+
+	    
+	    /**
+	     * Runs the motors with tank steering.
+	     */
+	    public void operatorControl() {
+	        myRobot.setSafetyEnabled(true);
+	        while (isOperatorControl() && isEnabled()) {
+	        	myRobot.tankDrive(leftStick, rightStick);
+	            Timer.delay(0.005);		// wait for a motor update time
+	        }
+	    }
+
+
+	
 	public static OI oi;
+	public static final Subsystem DriveTrain= new org.usfirst.frc.team2264.robot.subsystems.DriveTrain();
 
     Command autonomousCommand;
     SendableChooser chooser;
@@ -32,12 +59,11 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         chooser = new SendableChooser();
-        chooser.addDefault("Default Auto", new ExampleCommand());
+        chooser.addDefault("Default Auto", new org.usfirst.frc.team2264.robot.subsystems.DriveTrain());
 //        chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
     }
-	//hi
-	/**
+		/**
      * This function is called once each time the robot enters Disabled mode.
      * You can use it to reset any subsystem information you want to clear when
 	 * the robot is disabled.
