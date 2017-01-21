@@ -13,12 +13,35 @@ public class OI {
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
     // number it is.
-    Joystick rightStick = new Joystick(0);
-    Joystick leftStick = new Joystick(1);
+    Joystick rightStick = new Joystick(RobotMap.rightStickNumber);
+    Joystick leftStick = new Joystick(RobotMap.leftStickNumber);
+    
     
 
-    Button RtopRightButt = new JoystickButton(rightStick, 4);
-    Button RtopMidTopButt = new JoystickButton(rightStick, 2);
+    Button RtopRightButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RtopRightButtNumber);
+    Button RtopMidTopButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RtopMidTopButtNumber);
+    Button RtopBottomButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RtopBottomButtNumber);
+    Button RtopLeftButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RtopLeftButtNumber);
+    Button RbackButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbackButtNumber);
+    Button RbottomLeftBottomButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbottomLeftBottomButtNumber);
+    Button RbottomLeftTopButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbottomLeftTopButtNumber);
+    Button RbottomRightBottomButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbottomRightBottomButtNumber);
+    Button RbottomRightTopButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbottomRightTopButtNumber);
+    Button RbottomLeftButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbottomLeftButtNumber);
+    Button RbottomRightButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RbottomRightButtNumber);
+
+    
+    Button LtopRightButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LtopRightButtNumber);
+    Button LtopMidTopButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LtopMidTopButtNumber);
+    Button LtopBottomButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LtopBottomButtNumber);
+    Button LtopLeftButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LtopLeftButtNumber);
+    Button LbackButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbackButtNumber);
+    Button LbottomLeftBottomButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomLeftBottomButtNumber);
+    Button LbottomLeftTopButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomLeftTopButtNumber);
+    Button LbottomRightBottomButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightBottomButtNumber);
+    Button LbottomRightTopButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightTopButtNumber);
+    Button LbottomLeftButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomLeftButtNumber);
+    Button LbottomRightButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightButtNumber);
 
     // Button button = new JoystickButton(stick, buttonNumber);
     
