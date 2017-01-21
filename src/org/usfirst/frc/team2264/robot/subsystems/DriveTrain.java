@@ -23,7 +23,7 @@ public class DriveTrain extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
-    public void takeJoystickInputs(Joystick left, Joystick right){
+    public void takeJoystickInputs(double left, double right){
     	robotDrive2.tankDrive(left,right);
     }
     public void stop(){

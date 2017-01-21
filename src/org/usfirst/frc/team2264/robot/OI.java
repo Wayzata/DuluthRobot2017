@@ -42,9 +42,19 @@ public class OI {
     Button LbottomRightTopButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightTopButtNumber);
     Button LbottomLeftButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomLeftButtNumber);
     Button LbottomRightButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightButtNumber);
-
+   
     // Button button = new JoystickButton(stick, buttonNumber);
     
+		// TODO Auto-generated method stub
+		
+		public double getLeftJoystick(){
+	        return leftStick.getY();
+	        }
+	        public double getRightJoystick(){
+	      return rightStick.getY();
+	        }
+}
+
     // There are a few additional built in buttons you can use. Additionally,
     // by subclassing Button you can create custom triggers and bind those to
     // commands the same as any other Button.
@@ -60,9 +70,9 @@ public class OI {
     // Run the command while the button is being held down and interrupt it once
     // the button is released.
     // button.whileHeld(new ExampleCommand());
-    
+
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
-}
+
 
