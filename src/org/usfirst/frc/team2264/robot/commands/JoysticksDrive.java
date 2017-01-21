@@ -4,12 +4,13 @@ package org.usfirst.frc.team2264.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 
 import org.usfirst.frc.team2264.robot.Robot;
+import org.usfirst.frc.team2264.robot.subsystems.DriveTrain;
 
 /**
  *
  */
 public class JoysticksDrive extends Command {
-
+DriveTrain drive= new DriveTrain();
     public JoysticksDrive() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.DriveTrain);
@@ -21,7 +22,8 @@ public class JoysticksDrive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.DriveTrain
+    	drive.takeJoystickInputs(Robot.oi.getLeftJoystick(),Robot.oi.getRightJoystick());
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -31,10 +33,12 @@ public class JoysticksDrive extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	drive.stop();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }
