@@ -41,6 +41,15 @@ public class OI {
     Button LbottomRightTopButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightTopButtNumber);
     Button LbottomLeftButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomLeftButtNumber);
     Button LbottomRightButt = new JoystickButton(leftStick, RobotMap.LeftStickButtons.LbottomRightButtNumber);
+    
+    public double getLeftStick(){
+    	return leftStick.getY(GenericHID.Hand.kLeft);
+    }
+    
+    public double getRightStick(){
+    	return rightStick.getY(GenericHID.Hand.kRight);
+    }
+
 
     // Button button = new JoystickButton(stick, buttonNumber);
     
