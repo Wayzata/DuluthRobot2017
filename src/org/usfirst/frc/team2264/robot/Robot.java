@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team2264.robot;
 
+import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -19,6 +20,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * documentation. If you change the name of this class or the package after
  * creating this project, you must also update the manifest file in the resource
  * directory.
+ * 
+ * @author preetipidatala
+ *
  */
 public class Robot extends IterativeRobot {
 
@@ -31,7 +35,6 @@ public class Robot extends IterativeRobot {
 	        leftStick = new Joystick(0);
 	        rightStick = new Joystick(1);
 	    }
-
 	    
 	    /**
 	     * Runs the motors with tank steering.
