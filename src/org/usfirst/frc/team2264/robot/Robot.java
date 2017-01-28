@@ -1,7 +1,7 @@
 
 package org.usfirst.frc.team2264.robot;
 
-import edu.wpi.first.wpilibj.CANTalon;
+//import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -30,7 +30,7 @@ public class Robot extends IterativeRobot {
 	    Joystick leftStick;  // set to ID 1 in DriverStation
 	    Joystick rightStick; // set to ID 2 in DriverStation
 	    public Robot() {
-	        myRobot = new RobotDrive(0, 1);
+	        myRobot = new RobotDrive(RobotMap.leftDriveMotor, RobotMap.rightDriveMotor);
 	        myRobot.setExpiration(0.1);
 	        leftStick = new Joystick(0);
 	        rightStick = new Joystick(1);
