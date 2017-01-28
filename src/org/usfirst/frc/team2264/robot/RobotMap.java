@@ -19,8 +19,8 @@ public class RobotMap {
     public static final int ropeMotorLeft = 0;
     public static final int ropeMotorRight = 0;
     
-    public static final int rightStickNumber = 0;
-    public static final int leftStickNumber = 1;
+    public static final int rightStickPort = 0;
+    public static final int leftStickPort = 1;
 //    public static final int gamepadNumber = 2;
     public static final int XboxController = 2; 
     // If you are using multiple modules, make sure to define both the port

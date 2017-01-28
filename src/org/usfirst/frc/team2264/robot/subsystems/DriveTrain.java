@@ -32,7 +32,13 @@ public class DriveTrain extends Subsystem {
         // Set the default command for a subsystem here.
        //setDefaultCommand
     }
-    public void takeJoystickInputs(double left, double right){
+    public void takeJoystickInputs(double right, double left){
+    	boolean inDebug= true;
+    	if(inDebug){
+    //		SmartDashboard.putDouble("left", );
+    		SmartDashboard.putString("left", Double.toString(leftMotor.getSpeed()));
+    		SmartDashboard.putString("right", Double.toString(rightMotor.getSpeed()));	
+    	}
     	robotDrive2.tankDrive(left,right);
     }
     public void stop(){
