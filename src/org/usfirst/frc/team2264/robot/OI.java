@@ -15,8 +15,8 @@ public class OI {
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button
     // number it is.
-    Joystick rightStick = new Joystick(RobotMap.rightStickNumber);
-    Joystick leftStick = new Joystick(RobotMap.leftStickNumber);
+    Joystick rightStick = new Joystick(RobotMap.rightStickPort);
+    Joystick leftStick = new Joystick(RobotMap.leftStickPort);
     
     Button RtopRightButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RtopRightButtNumber);
     Button RtopMidTopButt = new JoystickButton(rightStick, RobotMap.RightStickButtons.RtopMidTopButtNumber);
