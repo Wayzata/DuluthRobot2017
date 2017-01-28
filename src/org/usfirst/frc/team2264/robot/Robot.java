@@ -1,11 +1,7 @@
 
 package org.usfirst.frc.team2264.robot;
 
-import java.util.Set; 
-
-import edu.wpi.first.wpilibj.CANTalon;
-import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.Encoder;
+//import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -17,7 +13,6 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc.team2264.robot.subsystems.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -30,29 +25,17 @@ import org.usfirst.frc.team2264.robot.subsystems.*;
  *
  */
 public class Robot extends IterativeRobot {
-	public static DriveTrain driveTrain;
-	public static RobotMap robotMap;
-	public static OI oi;
+
 	    RobotDrive myRobot;  // class that handles basic drive operations
-	 Joystick leftStick;  // set to ID 1 in DriverStation
+	    Joystick leftStick;  // set to ID 1 in DriverStation
 	    Joystick rightStick; // set to ID 2 in DriverStation
-	  private CameraServer cameraServer;
-	   public Command tankDrive;	    
 	    public Robot() {
 	        myRobot = new RobotDrive(RobotMap.leftDriveMotor, RobotMap.rightDriveMotor);
 	        myRobot.setExpiration(0.1);
-	        leftStick = new Joystick(RobotMap.leftStickPort);
-	        rightStick = new Joystick(RobotMap.rightStickPort);
-	        cameraServer = CameraServer.getInstance();
-	        cameraServer.setQuality(50);
-	        cameraServer.startAutomaticCapture("cam0");
-
-	
+	        leftStick = new Joystick(0);
+	        rightStick = new Joystick(1);
 	    }
-		
-	
-	     
-	   	    
+	    
 	    /**
 	     * Runs the motors with tank steering.
 	     */
@@ -66,7 +49,7 @@ public class Robot extends IterativeRobot {
 
 
 	
-	
+	public static OI oi;
 	public static final Subsystem DriveTrain= new org.usfirst.frc.team2264.robot.subsystems.DriveTrain();
 
     Command autonomousCommand;
@@ -82,8 +65,6 @@ public class Robot extends IterativeRobot {
         chooser.addDefault("Default Auto", new org.usfirst.frc.team2264.robot.subsystems.DriveTrain());
 //        chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
-        driveTrain= new DriveTrain();
-        robotMap= new RobotMap();
     }
 		/**
      * This function is called once each time the robot enters Disabled mode.
