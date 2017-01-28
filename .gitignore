@@ -1,5 +1,4 @@
 /bin/
 *.class
 *.jar
-build/org/usfirst/frc/team2264/robot/commands/JoysticksDrive.class
-.classpath
+/build/
